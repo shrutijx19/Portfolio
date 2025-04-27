@@ -1,108 +1,123 @@
 
-/* Basic Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.maxi-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background: rgba(0,0,0,0.7);
-    padding: 20px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffe4e1, #ffecd2);
+  overflow-x: hidden;
 }
 
-.maxi-header nav ul li {
-    margin: 0 15px;
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
-.maxi-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
 }
 
 .hero-section {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+  color: white;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
+.about-section {
+  background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998') no-repeat center/cover;
+  color: #000;
 }
 
-.social-links a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: underline;
+.works-section {
+  background: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366') no-repeat center/cover;
+  color: white;
 }
 
-.about-section, .projects-section, .publications-section, .contact-section {
-    padding: 60px 20px;
-    text-align: center;
+.publications-section {
+  background: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f') no-repeat center/cover;
+  color: white;
 }
 
-.about-section img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
+.contact-section {
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') no-repeat center/cover;
+  color: white;
 }
 
-.project-grid, .publication-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.content h1, .content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.project-card, .publication-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    width: 250px;
-    padding: 20px;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.project-card h3, .publication-card h3 {
-    margin: 10px 0;
-    padding: 0 10px;
-    font-size: 1.4rem;
+.card:hover {
+  transform: translateY(-10px);
 }
 
-.publication-card p {
-    color: #555;
-    font-size: 1rem;
-    margin-top: 5px;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pub-card {
+  background: rgba(0,0,0,0.6);
+  color: white;
 }
 
 .btn {
-    padding: 10px 20px;
-    background: black;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-    color: white;
+  text-align: center;
+  padding: 2rem;
+  background: black;
+  color: white;
 }
