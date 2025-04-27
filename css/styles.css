@@ -319,7 +319,7 @@ html {
 
 
 body {
-    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff6e7f, #bfe9ff);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -589,7 +589,7 @@ a {
 .publication-item {
     background: hsla(36, 72%, 50%, 1);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-bottom: 15px;
 }
@@ -717,7 +717,8 @@ textarea {
 /* Change font size and weight for the entire nav */
 
 .main-nav {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     font-size: 18px;
     font-weight: bold;
     box-shadow: none;
@@ -1434,9 +1435,9 @@ a:active {
 a:hover,
 a:active {
     
-background-color: #feb47b;
+background-color: #ffaa5a;
 transform: scale(1.05);
-color: white;
+color: #0a0a0a;
 outline: 0;
 
 }
@@ -1774,7 +1775,8 @@ hr.fancy::before {
     line-height: 1;
     padding: 0 0.125em 0 0;
     text-transform: uppercase;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     color: var(--color-text-dark);
 }
 
@@ -2021,9 +2023,9 @@ select {
     padding: var(--input-vpadding) 0 calc(var(--input-vpadding) - 1px);
     border: 0;
     
-background-color: #feb47b;
+background-color: #ffaa5a;
 transform: scale(1.05);
-color: white;
+color: #0a0a0a;
 outline: 0;
 
     color: var(--color-text-light);
@@ -2031,7 +2033,8 @@ outline: 0;
     font-size: calc(var(--text-size) * 0.7778);
     line-height: var(--input-line-height);
     max-width: 100%;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
     transition: all .3s ease-in-out;
 }
@@ -2227,9 +2230,9 @@ input[type="button"]:hover {
     border-color: var(--color-btn-hover);
     color: var(--color-btn-hover-text);
     
-background-color: #feb47b;
+background-color: #ffaa5a;
 transform: scale(1.05);
-color: white;
+color: #0a0a0a;
 outline: 0;
 
 }
@@ -3836,9 +3839,9 @@ about-info {
 .folio-list__item-link:hover {
     color: var(--color-1);
     
-background-color: #feb47b;
+background-color: #ffaa5a;
 transform: scale(1.05);
-color: white;
+color: #0a0a0a;
 outline: 0;
 
 }
@@ -4499,4 +4502,9 @@ p {
 @keyframes fadeInText {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+
+* {
+    transition: all 0.3s ease;
 }
