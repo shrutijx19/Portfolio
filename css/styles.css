@@ -181,7 +181,7 @@
      */
     --color-body: var(--color-gray-10);
     --color-border: rgba(255, 255, 255, .05);
-    --border-radius: 3px;
+    --border-radius: 30px;
 }
 
 /* ------------------------------------------------------------------- 
@@ -317,9 +317,21 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+
 body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff6e7f, #bfe9ff);
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
+    font-family: var(--font-1);
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    animation: fadeInBody 1.5s ease-in;
 }
+
 
 main {
     display: block;
@@ -703,20 +715,28 @@ textarea {
 }
 
 /* Change font size and weight for the entire nav */
+
 .main-nav {
+    background: transparent;
     font-size: 18px;
-    /* Adjust the font size as needed */
     font-weight: bold;
-    /* Change to your preferred font weight */
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    animation: slideDown 1.5s ease-out;
 }
 
+
 /* Optional: Adjust font size and weight for specific links */
+
 .main-nav a {
     font-size: 16px;
-    /* Specific font size for the links */
     font-weight: normal;
-    /* Specific font weight for the links */
+    color: white;
+    transition: color 0.3s ease;
 }
+
 
 /* Adjust font size and weight for the active/current link */
 .main-nav .current a {
@@ -1413,7 +1433,12 @@ a:active {
 
 a:hover,
 a:active {
-    outline: 0;
+    
+background-color: #feb47b;
+transform: scale(1.05);
+color: white;
+outline: 0;
+
 }
 
 /* headings
@@ -1633,7 +1658,7 @@ code {
     background: var(--color-gray-9);
     border: 1px solid var(--color-gray-8);
     color: var(--color-text-dark);
-    border-radius: 3px;
+    border-radius: 30px;
 }
 
 pre>code {
@@ -1995,7 +2020,12 @@ select {
     height: var(--input-height);
     padding: var(--input-vpadding) 0 calc(var(--input-vpadding) - 1px);
     border: 0;
-    outline: 0;
+    
+background-color: #feb47b;
+transform: scale(1.05);
+color: white;
+outline: 0;
+
     color: var(--color-text-light);
     font-family: var(--font-1);
     font-size: calc(var(--text-size) * 0.7778);
@@ -2196,7 +2226,12 @@ input[type="button"]:hover {
     background-color: var(--color-btn-hover);
     border-color: var(--color-btn-hover);
     color: var(--color-btn-hover-text);
-    outline: 0;
+    
+background-color: #feb47b;
+transform: scale(1.05);
+color: white;
+outline: 0;
+
 }
 
 /* button primary
@@ -3800,7 +3835,12 @@ about-info {
 .folio-list__item-link:focus,
 .folio-list__item-link:hover {
     color: var(--color-1);
-    outline: 0;
+    
+background-color: #feb47b;
+transform: scale(1.05);
+color: white;
+outline: 0;
+
 }
 
 .folio-list__item-link:focus .folio-list__item-pic::before,
@@ -4429,4 +4469,34 @@ about-info {
     .ss-go-top {
         right: 6vw;
     }
+}
+
+@keyframes fadeInBody {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.main-nav a:hover {
+    color: #ff6e7f;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    animation: fadeInText 2s ease-in;
+}
+
+p {
+    color: #f0f0f0;
+    animation: fadeInText 2s ease-in;
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
